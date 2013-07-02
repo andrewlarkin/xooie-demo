@@ -1,0 +1,49 @@
+// Base Unit Multiplier
+
+@function cp($multiplier) {
+    @return $p * $multiplier
+}
+
+// Links and Buttons
+
+@mixin link {
+    color: $light-grey;
+    text-decoration: none;
+    @include single-transition(color, $short-transition, $default-easing, 0);
+
+    &:hover,
+    &:focus {
+        color: $white;
+    }
+}
+
+// List Styling
+
+@mixin default-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+@mixin horizontal-list {
+    display: inline-block;
+    @include default-list;
+    font-size: 0;
+
+    > li {
+        display: inline-block;
+        font-size: default;
+    }
+}
+
+@mixin numbered-list {
+    list-style-type: decimal;
+    margin: 0;
+    padding: 0;
+}
+
+@mixin bulleted-list {
+    list-style-type: circle;
+    margin: 0;
+    padding: 0;
+}

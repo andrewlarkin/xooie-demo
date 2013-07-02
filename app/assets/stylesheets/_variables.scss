@@ -1,0 +1,46 @@
+@import 'compass';
+@import 'mixins';
+
+// Base Values
+
+$p: 5px;
+
+// Timing
+
+$short-transition: 0.20s;
+$medium-transition: 0.50s;
+$long-transition: 1.0s;
+
+// Easing
+
+$default-easing: ease-in-out;
+
+// Color Palette
+
+$black: #000000;
+$almost-black: #141414;
+$dark-grey: #4F4F4F;
+$light-grey: #E5E5E5;
+$white: #FFFFFF;
+
+$bright-blue: #00EBFF;
+$aqua-blue: #35E8CB;
+
+// Alpha Colors
+
+// Type Sizes
+$huge: 46px;
+$xlarge: 24px;
+$large: 20px;
+$normal: 18px;
+$medium: 14px;
+$small: 12px;
+
+$default-typeface: Helvetica, Arial, sans-serif;
+
+// Colors for Layout Development
+$debug-R: #CC1F26;
+$debug-G: #1EB655;
+$debug-O: #E59026;
+$debug-B: #0058C7;
+$debug-Y: #FFD602;

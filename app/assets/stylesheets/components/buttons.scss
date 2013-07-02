@@ -1,0 +1,14 @@
+@import 'compass';
+@import 'variables';
+@import 'mixins';
+
+.x-button {
+    display: inline-block;
+    @include link;
+    padding: cp(2) cp(4);
+    border: 1px solid $light-grey;
+}
+
+.x-link {
+    @include link;
+}

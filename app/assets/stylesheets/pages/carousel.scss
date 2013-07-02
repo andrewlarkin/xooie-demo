@@ -1,0 +1,51 @@
+@import 'compass';
+@import 'variables';
+@import 'mixins';
+
+.xd-carousel {
+    position: relative;
+}
+
+.xd-carousel-control {
+    position: absolute;
+    font-size: 60px;
+    color: $light-grey;
+    top: 50%;
+    margin-top: -(60px/2);
+    text-align: center;
+
+    &.prev {
+        left: cp(-5);
+    }
+
+    &.next {
+        right: cp(-6);
+    }
+}
+
+.xd-carousel-content {
+    padding: 0;
+}
+
+.xd-carousel-item {
+
+    img {
+        height: 300px;
+    }
+
+    @media only screen and (max-width: 1520px) {
+        img { height: 200px; }
+    }
+
+    @media only screen and (max-width: 960px) {
+        img { height: 150px; }
+    }
+
+    @media only screen and (max-width: 640px) {
+        img { height: 100px; }
+    }
+
+    @media only screen and (max-width: 320px) {
+        img { height: 50px; }
+    }   
+}

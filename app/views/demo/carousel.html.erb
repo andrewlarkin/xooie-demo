@@ -1,0 +1,27 @@
+<% content_for :body do %>
+        
+    <h2 class="xd-h2">The Amazing Responsive Carousel</h2>
+
+    <!-- Carousel Example -->
+    <div class="xd-carousel" data-widget-type="carousel" data-display-mode="item">
+        <button class="xd-carousel-control icon-left-chevron prev" type="button" data-role="carousel-control" data-scroll="-1item"></button>
+        <button class="xd-carousel-control icon-right-chevron next" type="button" data-role="carousel-control" data-scroll="+1item"></button>
+
+        <div>
+            <ol class="xd-carousel-content" data-role="carousel-content">
+                <% Dir.entries('app/assets/images/space').each do |image| %>
+                    <% next if image == '.' or image == '..' %>
+
+                    <li class="xd-carousel-item"><%= image_tag "space/" + image %> </li>
+                <% end %>
+            </ol>
+        </div>
+
+        <div class="xd-carousel-display" data-role="carousel-display"></div>
+
+        <script type="text/x-jquery-tmpl" data-role="carousel-display-template" data-template-language="mustache">
+            <span>{{current_item}}-{{last_visible_item}} of {{total_items}}</span>
+        </script>
+    </div>
+
+<% end %>

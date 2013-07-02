@@ -1,0 +1,116 @@
+<% content_for :body do %>
+    
+    <div data-widget-type="carousel" class="xd-presentation">
+        <button class="xd-slide-control icon-left-chevron prev" type="button" data-role="carousel-control" data-scroll="-1item"></button>
+        <button class="xd-slide-control icon-right-chevron next" type="button" data-role="carousel-control" data-scroll="+1item"></button>
+
+        <div>
+            <ol data-role="carousel-content">
+                <li class="xd-slide-item">
+                    <section class="xd-slide">
+
+                        <h2 class="xd-h2">The Problem</h2>
+
+                        <p>JavaScript widget libraries either require inline styles, or require specific stylesheets, to work.
+                        jQuery UI, YUI, etc</p>
+
+                    </section>
+                </li>
+
+                <li class="xd-slide-item">
+                    <section class="xd-slide">
+
+                        <h2 class="xd-h2">And this causes complications...</h2>
+
+                        <p>UI widget frameworks require the developer to use the designs provided</p>
+                        <p>Even if the styles are changeable, the new styles may conflict with necessary styles</p>
+                        <p>There is a lot of extra work involved in unraveling these styles</p>
+                        <p>Inline styles applied using JavaScript will always blow away other styles</p>
+
+                    </section>
+                </li>
+
+                <li class="xd-slide-item">
+                    <section class="xd-slide">
+
+                        <h2 class="xd-h2">Why not use JavaScript to manipulate CSS and HTML?</h2>
+
+                        <p>If JavaScript is used to manipulate styles, how can we determine whether or not those styles are added at certain breakpoints?</p>
+
+                    </section>
+                </li>
+
+                <li class="xd-slide-item">
+                    <section class="xd-slide">
+
+                        <h2 class="xd-h2">A Solution!</h2>
+
+                        <p>Well, ok, let’s make JavaScript respond to breakpoints!</p>
+                        
+                        <p>And actually, this is a great idea! (and we'll get back to it later...)</p>
+
+                    </section>
+                </li>   
+
+                <li class="xd-slide-item">
+                    <section class="xd-slide">
+
+                        <p>We do this for some functionality, but it isn’t without some downsides:</p>
+
+                        <ul>
+                            <li>Different widgets require different breakpoints, requiring separate tracking elements for each widget.</li>
+                            <li>Markup is being added that has no semantic meaning</li>
+                            <li>If these methods are influencing presentational changes then JavaScript is essentially doing the job of CSS</li>
+                        </ul>
+
+                    </section>
+                </li>
+
+                <li class="xd-slide-item">
+                    <section class="xd-slide">
+
+                        <h2 class="xd-h2">Generally speaking, we don't want JavaScript doing everything</h2>
+
+                        <p>This is an example of “role-mongering” - JavaScript becomes responsible for rendering markup, defining presentation, and providing functionality.  There should ideally be a clear distinction between the roles of HTML, CSS, and JavaScript.</p>
+
+                    </section>
+                </li>
+
+                <li class="xd-slide-item">
+                    <section class="xd-slide">
+
+                        <p>The idea is to have JavaScript get out of the way of CSS and HTML so your markup and styles can do what they are supposed to.</p>
+
+                    </section>
+                </li>
+
+                <li class="xd-slide-item">
+                    <section class="xd-slide">
+
+                        <h2 class="xd-h2">The Principles of Xooie</h2>
+
+                        <ul class="xd-bulleted-list">
+                            <li>Widgets are <span class="xd-emphasis">agnostic of markup and styles</span></li>
+                            <li><span class="xd-emphasis">No inline styles</span> should be added to markup</li>
+                            <li>When there is a need to communicate information from markup to JavaScript, <span class="xd-emphasis">use data attributes</span></li>
+                            <li><span class="xd-emphasis">Use roles</span>to convey important information</li>
+                            <li>To change the state of a widget, <span class="xd-emphsis">toggle classes</span></li>
+                            <li><span class="xd-emphasis">Manipulate the DOM StyleSheet</span> object to change styles</li>
+                        </ul>
+
+                    </section>
+                </li> 
+
+                <li class="xd-slide-item">
+                    <section class="xd-slide">
+
+                        <p>So essentially, we were able to build reusable JavaScript UI widgets that could work perfectly with our responsive layouts</p>
+
+                    </section>
+                </li>
+            </ol>
+        </div>
+    </div>
+
+
+<% end %>

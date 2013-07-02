@@ -1,0 +1,25 @@
+@import 'compass';
+@import 'variables';
+@import 'mixins';
+
+[class^="icon-"]::before,
+[class*="icon-"]::before {
+    font-family: 'EntypoIcon';
+    font-style: normal;
+    speak: none;
+    font-weight: 200;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+
+    position: relative;
+    top: 2px;
+    margin-right: cp(1);
+}
+
+.icon-left-chevron:before {
+    content: "\e765";
+}
+
+.icon-right-chevron:before {
+    content: "\e766";
+}

@@ -1,0 +1,65 @@
+@import 'compass';
+@import 'variables';
+@import 'mixins';
+
+body.xd {
+    font-family: $default-typeface;
+    padding: 2.5em;
+}
+
+.xd-skip {
+
+}
+
+.xd-header {
+
+}
+
+.xd-h1 {
+    color: $white;
+    font-family: 'JosefinSansLight';
+    font-size: $huge;
+}
+
+.xd-h2 {
+    color: $light-grey;
+    font-family: 'JosefinSansThin';
+    font-size: $large;
+}
+
+.xd-nav {
+
+}
+
+.xd-nav-list {
+    @include horizontal-list;
+    width: 100%;
+}
+
+.xd-nav-list-item {
+    font-size: $normal;
+    padding: 0 cp(2) 0 0;
+
+    &:last-child {
+        padding: 0;
+    }
+}
+
+.x-button.xd-nav-list-link {
+
+    @include single-transition(all, $short-transition, $default-easing, 0);
+
+    &:hover,
+    :focus {
+        color: $bright-blue;
+        border-color: $bright-blue;
+    }
+
+    &.is-active {
+        color: $aqua-blue;
+    }
+}
+
+.xd-content {
+    padding-top: cp(5);
+}

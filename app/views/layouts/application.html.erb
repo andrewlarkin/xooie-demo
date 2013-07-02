@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>XooieDemo</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body class="xd">
+
+    <nav class="xd-skip"></nav>
+
+    <header class="xd-header">
+        <h1 class="xd-h1">Xooie Sample Code</h1>
+    </header>
+
+    <nav class="xd-nav">
+        <ol class="xd-nav-list">
+            <li class="xd-nav-list-item"><a href="/" class="x-button xd-nav-list-link">Principles</a></li>
+            <li class="xd-nav-list-item"><a href="/demo/carousel" class="x-button xd-nav-list-link">Carousel</a></li>
+            <li class="xd-nav-list-item"><a href="/demo/tab" class="x-button xd-nav-list-link">Tab</a></li>
+            <li class="xd-nav-list-item"><a href="/demo/accessibility" class="x-button xd-nav-list-link">Accessibility</a></li>
+        </ol>
+    </nav>
+
+    <section class="xd-content">
+    
+    <%= yield :body %>
+
+    </section>
+
+    <footer class="xd-footer">
+        <p>&copy 2013 Comcast</p>
+        <p><a href="http://github.com/Comcast/Xooie" class="x-link footer-link">Contribute</a></p>
+    </footer>
+</body>
+</html>
